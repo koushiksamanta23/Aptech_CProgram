@@ -11,4 +11,3 @@ int main()
 	printf("%d is a negative number",num);
 	return 0;
 }
-//Successful
