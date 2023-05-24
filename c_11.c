@@ -7,7 +7,7 @@ int main()
    a++;
    if(a>15)
      {
-   	  /*herminate the loop using break statement*/
+   	  /*terminate the loop using break statement*/
    	    break;
      }
    }
