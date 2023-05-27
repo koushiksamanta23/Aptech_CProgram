@@ -1,15 +1,15 @@
 #include<stdio.h>
 int main()
 {
-	float p,r,t,si;
+	int p,r,t,si;
 	printf("enter principle\n");
 	scanf("%d",&p);
 	printf("enter rate of interset\n");
-	scanf("%f",&r);
+	scanf("%d",&r);
 	printf("enter time\n");
-	scanf("%f",&t);
+	scanf("%d",&t);
 	si=(p*r*t)/100;
-	printf("simple interset=%f",&si);
+	printf("simple interset=%d\n",si);
 	return 0;
 }
 
