@@ -1,26 +1,26 @@
 #include <stdio.h>
 int main()
 {
-	int n,m;
-	printf("enter the mark of ther student:\n");
-	scanf("%d",&n);n
-	m = n/10;
-	switch(m)
-	{
-	case 9: printf("grade:o,outstanding");
-	break;
-	case 8: printf("grade:e,excellent");
-	break;
-	case 7: printf("grade:a,very good");
-	break;
-	case 6: printf("grade:b,good");
-	break;
-	case 5: printf("grade:c,statisfactory");
-	break;
-	case 4: printf("grade:d,standard");
-	break;
-	default: printf("fail");
-	break;	
-	}
-	return 0;
+    int n,m;
+    printf("Enter the mark of the student:\n");
+    scanf("%d",&n); 
+    n=(n-1)/10; 
+    switch(n) 
+    {
+    case 9: printf("Grade: O, Outstanding\n");
+    break;
+    case 8: printf("Grade: E, Excellent\n");
+    break;
+    case 7: printf("Grade: A, Very good\n");
+    break;
+    case 6: printf("Grade: B, Good\n");
+    break;
+    case 5: printf("Grade: C, Satisfactory\n");
+    break;
+    case 4: printf("Grade: D, Standard\n");
+    break;
+    default: printf("Fail\n");
+    break;  
+    }
+    return 0;
 }
