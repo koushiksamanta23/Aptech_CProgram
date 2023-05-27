@@ -1,5 +1,5 @@
 #include<stdio.h>
-int main()
+int main() 
 {
     float p,c,m,h,e,avg;
     printf("enter marks in physics\n");
