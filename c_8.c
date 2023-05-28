@@ -4,8 +4,8 @@ int main()
     int n,m;
     printf("Enter the mark of the student:\n");
     scanf("%d",&n); 
-    n=(n-1)/10; 
-    switch(n) 
+    m=n/10; 
+    switch(m) 
     {
     case 9: printf("Grade: O, Outstanding\n");
     break;
