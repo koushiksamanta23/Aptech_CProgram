@@ -11,4 +11,3 @@ int main()
 		printf("The fact is=%d",fact);
 	return 0;
 }
-
