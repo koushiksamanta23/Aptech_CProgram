@@ -1,5 +1,5 @@
 #include<stdio.h>
-void main()
+int main()
 {
 	int s,i;
 	float k=0.0;
@@ -9,5 +9,5 @@ void main()
 		printf("%d,%d\n",i,(i+1));
 	}
 	printf("the sum of the series is %f",k);
-	//return 0;
+	return 0;
 }
