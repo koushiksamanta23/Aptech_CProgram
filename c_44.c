@@ -6,8 +6,8 @@ int main()
     scanf("%d",&n);
    printf("\n multiplication table of the number:\n");
    for(i=1;i<=10;i++);
-   {
-    printf("%d*%d=%d\n",n,i,n*i);
-   }
+{
+   printf("%d*%d=%d\n",n,i,n*i);
+}
    return 0;
 }
