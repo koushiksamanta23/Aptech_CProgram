@@ -29,14 +29,18 @@ int main()
         {"balagurusamy","basic",30.00,"december",1984,"tmh",0},
         {"balagurusamy","cobol",60.00,"december",1988,"macmillan",25}
     };
+    printf("Size of Book:%d\n",sizeof(book));
+    printf("Size of record:%d\n",sizeof(struct record));
     no_of_records = sizeof(book)/sizeof(struct record);
+    
+    printf("Size of Book:%d\n",no_of_records);
     do
     {
         printf("enter title and author name as per the list\n");
         printf("\n title :     ");
-        get(title);
+        get(title);//inserting title name from input to parameter title declared above
         printf("author:  ");
-        get(author);
+        get(author);//inserting author name from input to parameter author declared above
         index = look_up(book,title,author,no_of_records);
         if(index!=-1)   /*book found*/
         {
@@ -48,10 +52,13 @@ int main()
                       book[index].date.year,
                       book[index].publisher);
             printf("enter number of copies:");
-            get(quantity);
-            if(atoi(quantity)<book[index].quantity)
-            printf("cost of %d copies = %.2f\n",atoi(quantity),
-                   book[index].price * atoi(quantity));
+            get(quantity);//inserting quantity from input to parameter quantity declared above
+
+            //atoi : For example, if the string is “123”, the function returns 123 as an int. If the string is “-456”, the function returns -456 as an int. If the string is “abc”, the function returns 0 as an int. If the string is “2147483648”, the function may return an undefined value as an int, since it exceeds the range of int on most systems.
+            int qty = atoi(quantity);
+            if(qty<book[index].quantity)
+            printf("cost of %d copies = %.2f\n",qty,
+                   book[index].price * qty);
             else
             printf("\n required copies not in stock\n\n");                 
         }
@@ -77,10 +84,20 @@ get(char string[])
 }
 int look_up(struct record table[],char s1[],char s2[],int m) 
 {
+    //s1 contains title input
+    //s2 contains author input
     int i;
     for(i=0;i<m;i++)
-    if(strcmp(s1,table[i].title)== 0 &&
-    strcmp(s2,table[i].author)== 0)
-    return(i); 
-    return(-1); 
+    {
+        //strcmp is used for comparing 2 string at acii level i.e. A != a but a == a
+        if(strcmp(s1,table[i].title) == 0 && strcmp(s2,table[i].author)== 0) 
+        {
+            //if s1 and table[i].title matches and s2 and table[i].author matches then returning the index stored in i
+            return(i); 
+        }
+        else
+        {
+            return(-1); 
+        }
+    }
 }
